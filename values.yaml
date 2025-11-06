@@ -4,7 +4,7 @@ app:
 replicaCount: 4
 
 image:
-  repository: ngix
+  repository: ngnix
   tag: "1.21"
 
 service:
