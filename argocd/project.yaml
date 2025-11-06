@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: nginx-project
+  namespace: argocd
+spec:
+  description: Project for Nginx Helm applications
+  sourceRepos:
+  - 'https://github.com/YOUR_USERNAME/helm-argo-testing.git'
+  destinations:
+  - namespace: nginx-app
+    server: https://kubernetes.default.svc
+  - namespace: default
+    server: https://kubernetes.default.svc
+  clusterResourceWhitelist:
+  - group: ''
+    kind: Namespace
+  namespaceResourceWhitelist:
+  - group: ''
+    kind: Service
+  - group: apps
+    kind: Deployment
+  - group: ''
+    kind: ConfigMap
+  - group: ''
+    kind: Secret
