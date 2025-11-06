@@ -6,7 +6,7 @@ metadata:
 spec:
   description: Project for Nginx Helm applications
   sourceRepos:
-  - 'https://github.com/YOUR_USERNAME/helm-argo-testing.git'
+  - 'https://github.com/Mishu-techAWS/helm-argo-testing.git'
   destinations:
   - namespace: nginx-app
     server: https://kubernetes.default.svc
