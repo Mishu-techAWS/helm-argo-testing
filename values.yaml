@@ -1,7 +1,7 @@
 app:
   name: nginx-app
 
-replicaCount: 5
+replicaCount: 6
 
 image:
   repository: nginx
